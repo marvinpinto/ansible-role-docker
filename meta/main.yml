@@ -1,0 +1,19 @@
+galaxy_info:
+  author: Marvin Pinto
+  description: |
+    This Ansible role enables people to install the latest Docker on an Ubuntu-like
+    system. It also provides a handy library function to validate that the Docker
+    daemon is running and functional.
+  license: MIT
+  min_ansible_version: 1.4
+  platforms:
+    - name: Ubuntu
+      versions:
+       - all
+    - name: Debian
+      versions:
+       - all
+  galaxy_tags:
+    - docker
+    - ubuntu
+dependencies: []
