@@ -9,10 +9,7 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
-       - all
-    - name: Debian
-      versions:
-       - all
+       - trusty
   galaxy_tags:
     - docker
     - ubuntu
