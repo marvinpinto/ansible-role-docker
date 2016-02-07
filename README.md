@@ -1,7 +1,8 @@
 docker
 ======
 
-[![Build Status](https://travis-ci.org/marvinpinto/ansible-role-docker.svg?branch=master)](https://travis-ci.org/marvinpinto/ansible-role-docker)
+[![Build Status](https://img.shields.io/travis/marvinpinto/ansible-role-docker/master.svg?style=flat-square)](https://travis-ci.org/marvinpinto/ansible-role-docker)
+[![Ansible Galaxy](https://img.shields.io/badge/galaxy-marvinpinto--docker-660198.svg?style=flat-square)](https://galaxy.ansible.com/marvinpinto/docker)
 
 This Ansible role enables people to install the latest Docker on an Ubuntu-like
 system. It also provides a handy library function to validate that the Docker
