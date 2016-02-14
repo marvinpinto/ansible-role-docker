@@ -34,3 +34,18 @@
   retries: 5
   delay: 10
   until: result|success
+
+- name: 'Install python-pip'
+  apt:
+    name: 'python-pip'
+    state: 'present'
+
+- name: 'Install virtualenv'
+  pip:
+    name: 'virtualenv'
+    state: 'present'
+
+- name: 'Install docker-py'
+  pip:
+    name: 'docker-py'
+    state: 'present'
