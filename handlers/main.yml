@@ -2,3 +2,9 @@
 - name: 'docker-apt-get-update'
   apt:
     update_cache: true
+
+- name: 'docker-restart-service'
+  service:
+    name: 'docker'
+    state: 'restarted'
+    enabled: 'yes'

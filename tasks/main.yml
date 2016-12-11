@@ -22,6 +22,17 @@
     name: 'docker-engine'
     state: 'latest'
 
+- name: 'Add any additional service startup options to the DOCKER_OPTS config variable'
+  lineinfile:
+    dest: '/etc/default/docker'
+    state: 'present'
+    line: 'DOCKER_OPTS="{{docker_additional_service_opts}}"'
+    regexp: '^DOCKER_OPTS='
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+  notify: 'docker-restart-service'
+
 - name: 'Start the docker service'
   service:
     name: 'docker'

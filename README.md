@@ -15,6 +15,15 @@ Requirements
 
 This role will only work on an Ubuntu-like system.
 
+Role Variables
+--------------
+
+```yaml
+# Any additional docker service options
+# Example: '--dns 8.8.8.8 --dns 8.8.4.4 --userns-remap=default'
+docker_additional_service_opts: ''
+```
+
 Examples
 --------
 
