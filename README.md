@@ -40,10 +40,10 @@ Use it in a playbook as follows:
       ping:
   roles:
     - role: 'marvinpinto.docker'
-      sudo: true
+      become: true
   tasks:
     - name: 'Ensure that the docker daemon is functional'
-      sudo: true
+      become: true
       docker_ping:
       retries: 5
       delay: 10

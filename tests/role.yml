@@ -5,10 +5,10 @@
       ping:
   roles:
     - role: 'ansible-role-docker'
-      sudo: true
+      become: true
   tasks:
     - name: 'Ensure that the docker daemon is functional'
-      sudo: true
+      become: true
       docker_ping:
       register: result
       retries: 5
@@ -16,14 +16,14 @@
       until: result|success
 
     - name: 'Start the nginx container'
-      sudo: true
+      become: true
       docker:
         name: 'nginx'
         image: 'nginx:latest'
         state: 'started'
 
     - name: 'Ensure that the docker daemon is functional specifically through /var/run/docker.sock'
-      sudo: true
+      become: true
       docker_ping:
         unix_socket: '/var/run/docker.sock'
       register: result
