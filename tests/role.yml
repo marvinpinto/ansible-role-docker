@@ -15,9 +15,14 @@
       delay: 10
       until: result|success
 
+    - name: 'Pull in the latest nginx container'
+      become: true
+      docker_image:
+        name: 'nginx:latest'
+
     - name: 'Start the nginx container'
       become: true
-      docker:
+      docker_container:
         name: 'nginx'
         image: 'nginx:latest'
         state: 'started'
