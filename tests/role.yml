@@ -1,8 +1,5 @@
 ---
 - hosts: 'localhost'
-  tasks:
-    - name: 'Ensure that we can connect to this host'
-      ping:
   roles:
     - role: 'ansible-role-docker'
       become: true

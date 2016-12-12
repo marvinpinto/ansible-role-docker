@@ -35,9 +35,6 @@ ansible-galaxy install marvinpinto.docker -p ./roles
 Use it in a playbook as follows:
 ```yaml
 - hosts: 'servers'
-  tasks:
-    - name: 'Ensure that we can connect to this host'
-      ping:
   roles:
     - role: 'marvinpinto.docker'
       become: true
