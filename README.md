@@ -15,6 +15,15 @@ Requirements
 
 This role will only work on an Ubuntu-like system.
 
+Role Variables
+--------------
+
+```yaml
+# Any additional docker service options
+# Example: '--dns 8.8.8.8 --dns 8.8.4.4 --userns-remap=default'
+docker_additional_service_opts: ''
+```
+
 Examples
 --------
 
@@ -26,15 +35,12 @@ ansible-galaxy install marvinpinto.docker -p ./roles
 Use it in a playbook as follows:
 ```yaml
 - hosts: 'servers'
-  tasks:
-    - name: 'Ensure that we can connect to this host'
-      ping:
   roles:
     - role: 'marvinpinto.docker'
-      sudo: true
+      become: true
   tasks:
     - name: 'Ensure that the docker daemon is functional'
-      sudo: true
+      become: true
       docker_ping:
       retries: 5
       delay: 10
