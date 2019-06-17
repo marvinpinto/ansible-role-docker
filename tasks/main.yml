@@ -22,6 +22,12 @@
     name: 'docker-engine'
     state: 'latest'
 
+- name: 'Create the /etc/docker directory'
+  file:
+    path: '/etc/docker'
+    state: 'directory'
+    mode: '0700'
+
 - name: 'Add any additional docker startup options via the daemon.json config file'
   copy:
     content: "{{ docker_additional_service_opts }}"
