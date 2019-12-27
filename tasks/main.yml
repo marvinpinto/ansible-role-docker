@@ -48,7 +48,7 @@
   register: result
   retries: 5
   delay: 10
-  until: result|success
+  until: result.ping == 'pong'
 
 - name: 'Install python-pip'
   apt:
